@@ -1,0 +1,15 @@
+% import_POBS.m
+%
+%
+
+clear; close all
+
+POBS_dir=dir('../apg_data/2018_2019_Gisborne_HawkesBay/POBSdataforLaura/APGmat3/');
+
+for i=1:
+load('../apg_data/2018_2019_Gisborne_HawkesBay/POBSdataforLaura/APGmat3/APG00002_batch1.mat')
+
+test=table2array(pObsData);
+
+figure(32); clf; hold on
+plot(test(:,1),test(:,2))

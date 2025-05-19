@@ -1,0 +1,82 @@
+@REM No useful data recorded as incorrect APG cable was installed.
+@REM @python C:\scripts\seafloor-geod\apg_read.py ^
+@REM     --infile        ./TAN2301_GNS22-PF_140338.apg ^
+@REM     --snapg         140338 ^
+@REM     --version       CSAC2013 ^
+@REM     --clkstart      2022-10-15_00:20:00 ^
+@REM     --endwndw       2022-10-16_00:00:00.0 ^
+@REM     --bininterval   1d ^
+@REM     --gpssynctime   2023-006:12:15:00 ^
+@REM     --synctickcount 0x01adfe6e57 ^
+@REM     --fmttime       d ^
+@REM     --plot          rd ^
+@REM     | tee .\out\GNS22-PF.log
+    @REM --tempsmth      5001 ^
+    @REM --decimate      1 ^
+    @REM --beginwndw     2022-10-16_00:00:00.0 ^
+    @REM --outfile       .\out\GNS22-PF.csv ^
+
+@python C:\scripts\seafloor-geod\apg_read.py ^
+    --infile        ./TAN2301_GNS22-PI_140339.apg ^
+    --snapg         140339 ^
+    --version       Seascan2018 ^
+    --tempsmth      5001 ^
+    --decimate      1 ^
+    --clkstart      2022-10-13_23:29:00 ^
+    --beginwndw     2022-11-01_00:00:00.0 ^
+    --endwndw       2022-11-02_00:00:00.0 ^
+    --bininterval   1d ^
+    --gpssynctime   2023:006:06:49:00 ^
+    --fmttime       d ^
+    --outfile       .\out\GNS22-PI.csv ^
+    --plot          rd ^
+    | tee .\out\GNS22-PI.log
+
+@python C:\scripts\seafloor-geod\apg_read.py ^
+    --infile        ./TAN2301_GNS22-PJ_140345.apg ^
+    --snapg         140345 ^
+    --version       Seascan2018 ^
+    --tempsmth      5001 ^
+    --decimate      1 ^
+    --clkstart      2022-10-12_23:28:30 ^
+    --beginwndw     2022-11-01_00:00:00.0 ^
+    --endwndw       2022-11-02_00:00:00.0 ^
+    --bininterval   1d ^
+    --gpssynctime   2023:006:03:01:00 ^
+    --fmttime       d ^
+    --outfile       .\out\GNS22-PJ.csv ^
+    --plot          rd ^
+    | tee .\out\GNS22-PJ.log
+
+@python C:\scripts\seafloor-geod\apg_read.py ^
+    --infile        ./TAN2301_GNS22-PK_140344.apg ^
+    --snapg         140344 ^
+    --version       Seascan2018 ^
+    --tempsmth      5001 ^
+    --decimate      1 ^
+    --clkstart      2022-10-11_23:28:00 ^
+    --beginwndw     2022-11-01_00:00:00.0 ^
+    --endwndw       2022-11-02_00:00:00.0 ^
+    --bininterval   1d ^
+    --gpssynctime   2023:007:01:48:30 ^
+    --fmttime       d ^
+    --outfile       .\out\GNS22-PK.csv ^
+    --plot          rd ^
+    | tee .\out\GNS22-PK.log
+
+@python C:\scripts\seafloor-geod\apg_read.py ^
+    --infile        ./TAN2301_GNS22-PO_140342.apg ^
+    --snapg         140342 ^
+    --version       CSAC2013 ^
+    --tempsmth      5001 ^
+    --decimate      1 ^
+    --clkstart      2022-10-11_05:08:00 ^
+    --beginwndw     2022-11-01_00:00:00.0 ^
+    --endwndw       2022-11-02_00:00:00.0 ^
+    --bininterval   1d ^
+    --gpssynctime   2023:007:06:02:00 ^
+    --synctickcount 0x01C561104A ^
+    --fmttime       d ^
+    --outfile       .\out\GNS22-PO.csv ^
+    --plot          rd ^
+    | tee .\out\GNS22-PO.log

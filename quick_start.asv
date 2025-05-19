@@ -1,0 +1,24 @@
+% import_GPS.m
+%
+
+clear; close all
+
+%% GPS time series
+
+% MAKO
+fid = '../apg_data/gps/MAKO_e.txt';
+MAKO = readtable(fid);
+temp = table2array(MAKO(:,1));
+temp1 = cell2mat(temp);
+temp2 = datenum(temp1(:,1:10),'yyyy-mm-dd') + datenum(temp1(:,12:19),'HH:MM:SS')-datenum(2023,1,1);
+MAKO = [temp2,table2array(MAKO(:,2:3))]';
+
+% MAHI
+fid = '../apg_data/gps/MAHI_e.txt';
+MAHI = readtable(fid);
+temp = table2array(MAHI(:,1));
+temp1 = cell2mat(temp);
+temp2 = datenum(temp1(:,1:10),'yyyy-mm-dd') + datenum(temp1(:,12:19),'HH:MM:SS')-datenum(2023,1,1);
+MAHI = [temp2,table2array(MAHI(:,2:3))]';
+
+save('../processed_data/GPS','MAHI','MAKO')
